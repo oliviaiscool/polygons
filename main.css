@@ -3,20 +3,13 @@
 
 html, body {
   height: 100%;
-  background-color: black;
+  background-color: lavender;
+  text-align: center;
+  font-family: monospace;
 }
 
-body {
-  margin: 0;
-  display: flex;
-
-  /* This centers our sketch horizontally. */
-  justify-content: center;
-
-  /* This centers our sketch vertically. */
-  align-items: center;
-}
-
-p {
-  float: bottom;
+#canvas-holder {
+    padding: 20px;
+    display: block;
+    margin: auto;
 }

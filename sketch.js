@@ -11,7 +11,8 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    canvas = createCanvas(800, 560);
+    canvas.parent('canvas-holder');
     smooth();
     noStroke();
     background(0);
@@ -50,4 +51,18 @@ function draw() {
 
 function mousePressed(){
   background(0);
+}
+
+function keyTyped() {
+  if (key === 'f') {
+    if (!fullscreen()){
+      fullscreen(true);
+      resizeCanvas(windowWidth, windowHeight);
+      background(0);
+    } else {
+      fullscreen(false);
+      resizeCanvas(800, 560);
+      background(0);
+    }
+  }
 }
