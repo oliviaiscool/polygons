@@ -65,4 +65,8 @@ function keyTyped() {
       background(0);
     }
   }
+
+  if (key === 's') {
+    saveCanvas('nice');
+  }
 }
