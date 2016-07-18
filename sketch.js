@@ -47,3 +47,7 @@ function draw() {
         }
     }
 }
+
+function mousePressed(){
+  background(0);
+}
