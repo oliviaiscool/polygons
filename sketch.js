@@ -37,21 +37,19 @@ function draw() {
             var inbetweenCol = lerpColor(colorA, colorB, .5);
             fill(inbetweenCol);
 
-        beginShape();
-            for(var v=0; v<shapePoints; v++)
-            {
-                var arrayPos = xPos.length-1 - v;
-                vertex(xPos[arrayPos],yPos[arrayPos]);
-              }
-        endShape(CLOSE);
-
+            if (mouseIsPressed) {
+              beginShape();
+                  for(var v=0; v<shapePoints; v++)
+                  {
+                      var arrayPos = xPos.length-1 - v;
+                      vertex(xPos[arrayPos],yPos[arrayPos]);
+                    }
+              endShape(CLOSE);
+            }
         }
     }
 }
 
-function mousePressed(){
-  background(0);
-}
 
 function keyTyped() {
   if (key === 'f') {
@@ -68,5 +66,9 @@ function keyTyped() {
 
   if (key === 's') {
     saveCanvas('nice');
+  }
+
+  if (key === 'c') {
+    background(0);
   }
 }
